@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
@@ -14,6 +15,18 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.3.1/js/buttons.html5.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+=======
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="~/css/core.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.0/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.0/datatables.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+>>>>>>> 5db4543b2e99eda124ff499176e33e0eb6f2c5f2
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 </head>
@@ -42,6 +55,7 @@
                     <li class="sidebar-brand">
                         <a href="/home/index"> @User.Identity.Name </a>
                     </li>
+<<<<<<< HEAD
                     <li class="col">        
                         <a href="/lessons">Μαθήματα</a>
                     </li>
@@ -68,6 +82,35 @@
                             </li>
                         }
                     }
+=======
+	                <li class="col">        
+		                <a href="/lessons">Μαθήματα</a>
+	                </li>
+                    @{
+	                    if (!User.Identity.Name.StartsWith("admin"))
+	                    {
+		                    <li>
+			                    <a href="/lessons/marks">Βαθμολογίες</a>
+		                    </li>
+	                    }
+                    }
+                
+                    <li>
+                        <a href="#">Εξαγωγή Αρχείων</a>
+                    </li>
+	                <li>
+		                <a href="#">Στατιστικα Στοιχεία</a>
+	                </li>
+                    @{
+	                    if (User.Identity.Name.StartsWith("admin"))
+	                    {
+		                    <li>
+			                    <a href="/admin">Λειτουργίες Διαχειριστή</a>
+		                    </li>
+	                    }
+                    }
+
+>>>>>>> 5db4543b2e99eda124ff499176e33e0eb6f2c5f2
                     <li>
                         <a href="/user/logout">Αποσύνδεση</a>
                     </li>

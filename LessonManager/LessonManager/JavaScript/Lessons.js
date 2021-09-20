@@ -4,6 +4,7 @@
     window.localStorage.clear();
     // Φόρτωση των δεδομένων στο DataTable
     // Για την φόρτωση των δεδομένων χρησιμοποιείται το endpoint /lessons/getAllLessons
+<<<<<<< HEAD
     const classTable = $("#classes_table").DataTable({
 
         ajax: "/lessons/getClasses",
@@ -11,6 +12,11 @@
         buttons: [
           'excel'
         ],
+=======
+    const classTable =$("#classes_table").DataTable({
+        
+        ajax: "/lessons/getClasses",
+>>>>>>> 5db4543b2e99eda124ff499176e33e0eb6f2c5f2
         columns: [
             { data: "Id" },
             { data: "LessonName" },
@@ -44,10 +50,13 @@
     const dilosistable = $("#dilosis-table").DataTable({
         
         ajax: "/lessons/getClasses",
+<<<<<<< HEAD
         dom: 'Bfrtip',
         buttons: [
             'excel'
         ],
+=======
+>>>>>>> 5db4543b2e99eda124ff499176e33e0eb6f2c5f2
         columns: [
             { data: "Id" },
             { data: "LessonName" },
@@ -147,10 +156,13 @@
     // Φόρτωση των δεδομένων στο DataTable
     // Για την φόρτωση των δεδομένων χρησιμοποιείται το endpoint /lessons/getAllLessons
     const table = $("#lessons_table").DataTable({
+<<<<<<< HEAD
         dom: 'Bfrtip',
         buttons: [
             'excel'
         ],
+=======
+>>>>>>> 5db4543b2e99eda124ff499176e33e0eb6f2c5f2
             ajax: "/lessons/getAllLessons",
             columns: [
                 { data: "Id" },
@@ -161,11 +173,15 @@
     );    // Φόρτωση των δεδομένων στο DataTable
     // Για την φόρτωση των δεδομένων χρησιμοποιείται το endpoint /lessons/getAllLessons
     const table2 = $("#lessons_table2").DataTable({
+<<<<<<< HEAD
         ajax: "/lessons/getAllLessons",
         dom: 'Bfrtip',
         buttons: [
             'csv', 'excel', 'pdf'
         ],
+=======
+            ajax: "/lessons/getAllLessons",
+>>>>>>> 5db4543b2e99eda124ff499176e33e0eb6f2c5f2
             columns: [
                 { data: "Id" },
                 { data: "Name" },
