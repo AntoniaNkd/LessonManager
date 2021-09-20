@@ -1,0 +1,52 @@
+﻿@model LessonManager.ViewModel.OverViewModel
+@{
+    ViewBag.Title = "Marks";
+}
+<script src="~/JavaScript/Lessons.js" type="text/javascript"></script>
+
+@{
+    if (Model.UserRole == "teacher")
+    {
+        <h2>Βαθμολόγηση Φοιτητών</h2>
+        <table id="dilosis-table" class="display mt-2">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Ονομασία Μαθήματος</th>
+                    <th>Όνομα Σπουδαστή</th>
+                    <th>Εξάμηνο</th>
+                    <th>Βαθμός Θεωρίας </th>
+                    <th>Βαθμός Εργαστηρίου</th>
+                    <th>Τελικός Βαθμός</th>
+                    <th></th>
+
+                </tr>
+            </thead>
+        </table>
+
+    }
+    else
+    {
+        <h2>Δήλωση Μαθημάτων</h2>
+        <p>Παρακάτω εμφανίζονται τα μαθήματα που μπορείτε να δηλώσετε </p>
+        <table id="classes_table" class="display mt-2">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Ονομασία Μαθήματος</th>
+                    <th>Όνομα Καθηγητή</th>
+                    <th>Εξάμηνο</th>
+                    <th>Βαθμός Θεωρίας </th>
+                    <th>Βαθμός Εργαστηρίου </th>
+                    <th>Τελικός Βαθμος</th>
+                    <th>Status</th>
+                    <th></th>
+
+                </tr>
+            </thead>
+        </table>
+    }
+
+}
+
+
